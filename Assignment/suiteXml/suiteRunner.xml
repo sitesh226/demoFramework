@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1"  thread-count="3" parallel="classes">
+ <parameter name="browserParam" value="Firefox"/>
+
+    <test name="Phase 1: Test Weather on Ui ">
+      <classes>
+          <class name="tests.Phase1.TestWeather"></class>
+      </classes>
+  </test>
+
+
+    <test name="Phase 2: Test Weather api ">
+        <classes>
+            <class name="tests.Phase2.TestWeatherApi"></class>
+        </classes>
+    </test>
+
+    <test name="Phase 3: Test Weather ui and api temperature using comparator ">
+        <classes>
+            <class name="tests.Phase3.TestWeatherComparison"></class>
+        </classes>
+    </test>
+
+
+
+</suite>
